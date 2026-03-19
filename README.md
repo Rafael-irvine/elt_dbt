@@ -1,1 +1,1 @@
-# elt_dbt
+# Construção de ELT com Dbt-core e Snowflake
