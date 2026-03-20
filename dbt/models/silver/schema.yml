@@ -1,0 +1,44 @@
+version: 2
+
+sources:
+  - name: PROJETO_DBT
+    schema: PUBLIC
+    tables:
+      - name: listagem_trabalhos_remotos        
+        description: "Tabela de listagem de trabalhos remotos, contendo informações sobre as vagas disponíveis, como título, empresa, localização, tipo de emprego e data de publicação. Esta tabela é utilizada para análise e visualização dos dados relacionados ao mercado de trabalho remoto."
+        columns:
+        - name: id
+          description: "Identificador único da vaga de trabalho remoto."
+          tests:
+            - unique          
+        - name: url
+          description: "Link para a vaga de trabalho remoto."
+        - name: jobTitle
+          description: "Título da vaga de trabalho remoto."
+        - name: companyName
+          description: "Nome da empresa que oferece a vaga de trabalho remoto."
+        - name: companyLogo
+          description: "Company logo link."
+        - name: jobIndustry
+          description: "Setor de atuação da empresa que oferece a vaga de trabalho remoto."
+        - name: jobType
+          description: "Tipo de emprego (exemplo: tempo integral, meio período, contrato) para a vaga de trabalho remoto."
+        - name: jobGeo
+          description: "Restrição geográfica para a vaga de trabalho remoto (exemplo: global, país específico, região específica)."
+        - name: jobLevel
+          description: "Nível de experiência exigido para a vaga de trabalho remoto (exemplo: júnior, pleno, sênior)."
+        - name: jobExcerpt
+          description: "Resumo ou descrição breve da vaga de trabalho remoto."
+        - name: jobDescription
+          description: "Descrição detalhada da vaga de trabalho remoto, incluindo responsabilidades, requisitos e benefícios"
+        - name: pubDate
+          description: "Data de publicação da vaga de trabalho remoto."
+        - name: annualSalaryMax
+          description: "Salário anual máximo para a vaga de trabalho remoto."
+        - name: annualSalaryMin
+          description: "Salário anual mínimo para a vaga de trabalho remoto."
+        - name: annualSalaryCurrency
+          description: "Moeda do salário anual para a vaga de trabalho remoto de acordo com o padrão ISO 4217 (exemplo: USD, EUR, BRL)."
+        - name: annualSalaryPeriod
+          description: "Período do salário anual para a vaga de trabalho remoto (exemplo: ano, mês, semana)."
+  
